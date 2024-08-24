@@ -34,7 +34,7 @@ export const useSignUpPetInfo = () => {
       ...prevSignUpInfoAtom,
       pet: petInfo,
     }));
-    navigate("/signup/complete");
+    navigate("/legacy/signup/complete");
   };
 
   const disabledSubmitButton = Boolean(!petInfo.name || !petInfo.type);

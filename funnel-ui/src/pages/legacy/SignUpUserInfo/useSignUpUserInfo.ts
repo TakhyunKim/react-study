@@ -30,7 +30,7 @@ export const useSignUpUserInfo = () => {
     };
 
   const handleSubmitButtonClick = () => {
-    navigate("/signup/pet-info");
+    navigate("/legacy/signup/pet-info");
     setSignUpInfo((prevSignUpInfoAtom) => ({
       ...prevSignUpInfoAtom,
       user: userInfo,
