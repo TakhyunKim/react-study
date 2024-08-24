@@ -840,6 +840,18 @@
     "@typescript-eslint/types" "8.2.0"
     eslint-visitor-keys "^3.4.3"
 
+"@use-funnel/core@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@use-funnel/core/-/core-0.0.3.tgz#1ba5963af9140cb0df2e7ebb95b1f0d4bdad1427"
+  integrity sha512-0AWukzIAEcc35/GGJaMNICEL5IIkaxrWGMZyNsUj4YAJoY6K0U9/CmT92Clzc2RdH4WMQrJos/QcYFCDHHJ1rw==
+
+"@use-funnel/react-router-dom@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@use-funnel/react-router-dom/-/react-router-dom-0.0.3.tgz#4355bdca33e099eaa6784c07b13a9712d88a9bd0"
+  integrity sha512-XUv68oEWgbW5hfiek69o0cjF/F395+fpNec/Hpr/ijQGJNH1buQAWT4mHuD9URUWd+GM4BN4hcW6DyQvcTj/1w==
+  dependencies:
+    "@use-funnel/core" "^0.0.3"
+
 "@vitejs/plugin-react@^4.3.1":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-4.3.1.tgz#d0be6594051ded8957df555ff07a991fb618b48e"
