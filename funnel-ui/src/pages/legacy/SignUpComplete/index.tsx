@@ -1,14 +1,15 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+
+import { useSignUpComplete } from "./useSignUpComplete";
 
 function SignUpComplete() {
+  const { handleHomeButtonClick } = useSignUpComplete();
+
   return (
     <Box>
       Sign up complete
-      <Button component={Link} to="/">
-        홈으로
-      </Button>
+      <Button onClick={handleHomeButtonClick}>홈으로</Button>
     </Box>
   );
 }

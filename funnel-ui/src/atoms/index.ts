@@ -34,7 +34,9 @@ export const DEFAULT_PET_INFO: PetInfo = {
   sex: "수컷",
 };
 
-export const signUpInfoAtom = atom<SignUpInfo>({
+export const DEFAULT_SIGN_UP_INFO: SignUpInfo = {
   user: DEFAULT_USER_INFO,
   pet: DEFAULT_PET_INFO,
-});
+};
+
+export const signUpInfoAtom = atom<SignUpInfo>(DEFAULT_SIGN_UP_INFO);
