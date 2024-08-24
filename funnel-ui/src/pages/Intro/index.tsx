@@ -7,7 +7,7 @@ function Intro() {
     <Box>
       Intro{" "}
       <Button component={Link} to="/signup/user-info">
-        Sign up
+        회원 가입
       </Button>
     </Box>
   );
