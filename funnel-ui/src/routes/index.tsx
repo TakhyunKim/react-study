@@ -4,6 +4,7 @@ import Intro from "@/pages/Intro";
 import LegacySignUpPetInfo from "@/pages/legacy/SignUpPetInfo";
 import LegacySignUpUserInfo from "@/pages/legacy/SignUpUserInfo";
 import LegacySignUpComplete from "@/pages/legacy/SignUpComplete";
+import NewSignUp from "@/pages/new";
 
 function Routers() {
   return (
@@ -22,6 +23,7 @@ function Routers() {
           path="/legacy/signup/complete"
           element={<LegacySignUpComplete />}
         />
+        <Route path="/signup/user-info" element={<NewSignUp />} />
       </Routes>
     </BrowserRouter>
   );
