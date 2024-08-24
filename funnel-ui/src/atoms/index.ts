@@ -1,6 +1,7 @@
 import { atom } from "jotai";
 
 export type Sex = "남자" | "여자";
+export type PetSex = "수컷" | "암컷";
 
 export interface UserInfo {
   name: string;
@@ -12,7 +13,7 @@ export interface UserInfo {
 export interface PetInfo {
   name: string;
   type: string;
-  sex: Sex;
+  sex: PetSex;
 }
 
 export interface SignUpInfo {
@@ -29,8 +30,8 @@ export const DEFAULT_USER_INFO: UserInfo = {
 
 export const DEFAULT_PET_INFO: PetInfo = {
   name: "",
-  type: "",
-  sex: "남자",
+  type: "고양이",
+  sex: "수컷",
 };
 
 export const signUpInfoAtom = atom<SignUpInfo>({
