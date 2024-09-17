@@ -13,6 +13,10 @@ const loginInputSchema = z.object({
 export const HookForm = () => {
   const { formState, control, onSubmit } = useZodForm({
     schema: loginInputSchema,
+    defaultValues: {
+      email: "",
+      password: "",
+    },
     onFormValueChange: (_, formPath, setValue) => {
       if (formPath === "password") {
         setValue("email", "test@test.com");

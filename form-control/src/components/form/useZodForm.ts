@@ -8,13 +8,15 @@ import type {
   Path,
   FieldValues,
   DeepPartial,
+  DefaultValues,
   UseFormReturn,
   UseFormSetValue,
   UseFormHandleSubmit,
 } from "react-hook-form";
 
-interface UseZodFormParams<Schema, TFormValues extends FieldValues> {
+export interface UseZodFormOptions<Schema, TFormValues extends FieldValues> {
   schema: Schema;
+  defaultValues: DefaultValues<TFormValues>;
   /**
    * @param value 현재 변경된 값
    * @param formPath 변경된 값의 경로
@@ -28,7 +30,7 @@ interface UseZodFormParams<Schema, TFormValues extends FieldValues> {
   onFormSubmit: (data: TFormValues) => void;
 }
 
-type UseZodFormReturn<TFormValues extends FieldValues> = Omit<
+export type UseZodFormReturn<TFormValues extends FieldValues> = Omit<
   UseFormReturn<TFormValues>,
   /**
    * @description
@@ -69,11 +71,13 @@ export const useZodForm = <
   TFormValues extends z.infer<Schema>
 >({
   schema,
+  defaultValues,
   onFormSubmit,
   onFormValueChange,
-}: UseZodFormParams<Schema, TFormValues>): UseZodFormReturn<TFormValues> => {
+}: UseZodFormOptions<Schema, TFormValues>): UseZodFormReturn<TFormValues> => {
   const form = useForm<TFormValues>({
     resolver: zodResolver(schema),
+    defaultValues,
   });
 
   const { watch, setValue, handleSubmit, ...restForm } = form;
