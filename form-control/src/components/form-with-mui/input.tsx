@@ -26,15 +26,15 @@ export const Input = <T extends FieldValues, P extends FieldPath<T>>({
   return (
     <FormWrapper label={label} error={error}>
       <Controller
-        control={control}
         name={name}
+        control={control}
         render={({ field: { ref, ...fieldProps } }) => (
           <TextField
-            {...fieldProps}
             type={type}
-            ref={ref}
-            label="Email"
+            inputRef={ref}
+            label={label}
             variant="outlined"
+            {...fieldProps}
             {...props}
           />
         )}
